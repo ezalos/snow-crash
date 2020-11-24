@@ -1,7 +1,6 @@
-# level00
+# level01
 
 ## Context
-'''
 No README file this time.
 But in the /etc/passwd file, we can see the following:
 ```flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash```
