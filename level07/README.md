@@ -1,7 +1,7 @@
 # Level07
 
 ## Context
-We found `level07` in our home. When executed, this file outputs the following: ```level07``
+We found `level07` in our home. When executed, this file outputs the following: ```level07```
 
 ## Resolution
  * shell command ```ls -l``` outputs the following:
