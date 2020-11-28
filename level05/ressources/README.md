@@ -16,12 +16,13 @@ for i in /opt/openarenaserver/* ; do
 	rm -f "$i"
 done
 ```
- * ```/opt/openarenaserver/``` folder is empty and has the following permissions : ```drwxrwxr-x+ 2 root root``` ```getfacl``` command shows
+ * ```/opt/openarenaserver/``` folder is empty and has the following permissions : ```drwxrwxr-x+ 2 root root``` 
+ * ``getfacl``` command shows:
 ```
 user:level05:rwx
 user:flag05:rwx
 ```
- * As we have write permissions in this folder, we decide to add ```getflag_script``` in this folder by lauching the following command : ```echo "getflag > /var/crash/output.txt" > /opt/openarenaserver/getflag_script && chmod +x /opt/openarenaserver/getflag_script```
+ * As we have write permissions in this folder, we decide to add ```getflag_script``` into it by lauching the following command : ```echo "getflag > /var/crash/level05_output.txt" > /opt/openarenaserver/getflag_script && chmod +x /opt/openarenaserver/getflag_script```
  * We then laucnh ```crontab -e``` and copy ```/var/mail/level05``` into our crontab
- * After less than 2 minutes, we get the flag in the ```/var/crash/output.txt``` file
+ * After less than 2 minutes, we get the flag in the ```/var/crash/level05_output.txt``` file
 

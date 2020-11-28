@@ -9,5 +9,6 @@ We found `level02.pcap` in our home, you can find it in the Ressources dir.
  * We then look for the following `PSH` packet from `59.233.235.218`.
  * They are each 1 character long, and some of them contain the `DEL` character, which we assume cancel the previous character sent.
  * Reading this package until the carriage return `\r` gives us `ft_waNDReL0L`, which is the password for flag02.
+ * An alternative to wireshark GUI is to use the following command: ```tshark -r level02.pcap -e data.data -Tfields -e frame.number -e ip.src > tshark_output.txt``` and then to see the column data from from frame number ```45``` to ```83```
  
 
