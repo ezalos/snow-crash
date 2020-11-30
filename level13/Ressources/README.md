@@ -6,6 +6,14 @@ When executed, this program outputs: ```UID 2013 started us but we we expect 424
 
 ## Resolution
  * the disassembled program allows to see that a check is done on the UID before going further. As expected, if the user is not ```4242```, the program exits.
- * using ```gdb peda```, we skip the id check part to go directly to the call of ```ft_res``` function
+ * using ```gdb peda```, we skip the id check part to go directly to the call of ```ft_des``` function.
  * this function takes as input the following string, stored in the ```.rodata``` section: ```boe]!ai0FB@|L6l@.:A?>qJ}I```
  * this function outputs the decoded token (as you can see in the screenshot)
+ * the process to get those information is the following:
+```
+b *0x0804859a
+r
+print $eax=4242
+b *0x080485d7
+c
+```

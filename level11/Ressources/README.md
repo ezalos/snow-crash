@@ -15,5 +15,5 @@ stack traceback:
 ## Resolution
  * Launching ```find / -name "*level11*"``` outputs ```/etc/init.d/level11_start```, in which we can see that ```level11``` is already running as a deamon. 
  * ```io.popen``` is a function that executes the command passed in argument : we will use it to execute a command as ```flag11``` user
- * We launch the script ```client.lua``` that will pass ``` `getflag > /var/crash/output.txt` ``` in argument to the hash function.
- * The flag is now in ```/var/crash/output.txt```.
+ * We launch the script ```client.lua``` that will pass ``` `getflag > /var/crash/level11_output.txt` ``` in argument to the hash function.
+ * The flag is now in ```/var/crash/level11_output.txt```.
