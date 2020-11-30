@@ -17,7 +17,7 @@ for i in /opt/openarenaserver/* ; do
 done
 ```
  * ```/opt/openarenaserver/``` folder is empty and has the following permissions : ```drwxrwxr-x+ 2 root root``` 
- * ``getfacl``` command shows:
+ * ```getfacl``` command shows:
 ```
 user:level05:rwx
 user:flag05:rwx

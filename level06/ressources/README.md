@@ -38,6 +38,6 @@ Which means if we get it to execute `getflag` we will solve this level.
    * It will match with this pattern : `[x our_malicious_code]`
    * https://www.php.net/manual/fr/reference.pcre.pattern.modifiers.php in the docs, we have an example of malicious use of this vulnerability : `${eval($_GET[php_code])}}`
    * For us to be able to execute `getflag` we will use `shell_exec()` : https://www.php.net/manual/en/function.shell-exec.php
- * By trying a couple of combinaison we find this successfull file content: ```[x {${shell_exec(getflag)}}]``` which makes `./level06` to output the flag we are looking for.
+ * By trying a couple of combinaison we find this successfull file content: ```[x {${shell_exec(getflag)}}]```, that we put in a file:  ```echo '[x {${shell_exec(getflag)}}]' > /var/crash/level06_solution```. which makes `./level06 /var/crash/level06_solution` to output the flag we are looking for.
 
  
